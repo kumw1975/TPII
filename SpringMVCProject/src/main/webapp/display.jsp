@@ -1,12 +1,152 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ROSTER APP</title>
+
+
+
+
+
+<style>
+@font-face {
+    font-family: typography;
+    src: url(resources/din.otf);
+    
+}
+body{
+    background-color: rgb(243, 247,250);            
+    display: flex;
+    justify-content: center;
+    align-items: center;            
+    font-family: typography;    
+
+}
+.view{
+    display: flex;
+    justify-content: center;
+    align-items: center;           
+    border-radius: 8px;
+    height:500px;
+    width :832px;
+    padding:64px;
+    margin:0 20px 20px;
+    border:1px solid #d8d8d8;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;            
+}
+.access_header{
+    padding:10px;  
+    font-size: 20px;   
+    text-align: center; 
+    margin-bottom:30px
+}
+button {
+    border-radius: 4px;
+    margin-top: 10px;
+    background:white;
+    color: #641E16;
+    border: 1px solid #641E16;    
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    font-weight: 600;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;    
+    font-family: typography;    
+
+} 
+button:hover{
+    background: #641E16;
+    color: white;
+    border: 1px solid #641E16;
+
+}
+.form_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+    width: 412px;
+    overflow: hidden;
+    padding: 52px;  
+}
+
+.center_child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top_space{
+    margin-top:10px;
+}
+
+input{
+    font-family: typography;    
+    font-size: 16px;
+    line-height: 1.5; 
+    width:412px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background 100ms ease-in,width 100ms ease-out;
+    transition: background 100ms ease-in,width 100ms ease-out;    
+    outline: none;	
+    padding: 11px 16px 11px 16px;
+
+}
+input:focus{
+    /*height: 48px;*/
+    overflow: hidden;
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: background 100ms ease-in,width 100ms ease-out;
+    transition: background 100ms ease-in,width 100ms ease-out;    
+    outline: none;  
+    padding: 11px 16px 11px 16px;	
+
+	border:1px solid rgba(0,0,0,0.12); 
+	background:rgba(255,255,255,1);
+	box-shadow:0 1px 1px rgba(0,0,0,0.24)   
+}
+td>div{
+	margin:5px;
+}
+</style>
+
+
+
+
 </head>
 <body>
-Welcome 
+	<div class="view">
+	  <!-- <div class="heading">TC App Login</div> -->
+	    <div class="form_container">
+	      <table>
+	          <tbody>
+	            <tr><td>
+	              <div><h1 class="access_header" ">Welcome to the App</h1></div>
+	              <div><strong>First Name</strong></div>
+	              <div><input type="text" placeholder=" Enter Your first Name"></div></td></tr>
+	            <tr><td>
+	              <div><strong>Password</strong></div>
+	              <div><input type="password" placeholder="Enter Your Password"></div> </td></tr>
+	            <tr><td class="top_space center_child"> <button type="submit">Login</button></td></tr>
+	        </tbody>
+	      </table>          
+	    </div>
+	</div> 
 </body>
 </html>

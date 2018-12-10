@@ -4,6 +4,7 @@ package com.MVC.Controllers;
 
 import com.MVC.Model.Employee;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -17,6 +18,7 @@ import org.hibernate.query.Query;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 /*
  * This controller dispatches requests or messages from the
@@ -127,6 +129,7 @@ public class EmployeeController {
 		return page;	    
 	}
 	
+ 
 	@RequestMapping("/signUp")
 	public ModelAndView signUp(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception 
 	{
@@ -157,10 +160,7 @@ public class EmployeeController {
 		return page;	    
 	}
 	
-	
-	
-	
-	
+
     public void showTable() {    	
     this.db = new DB_coonectionController(this.emp);
 	String hql = "FROM Employee";
